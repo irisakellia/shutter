@@ -1,27 +1,26 @@
 import React from 'react'
 
-
 const Form = () => {
   return (
-    <div>
-      <p>Hello!</p>
-      <p>Welcome Back</p>
-      <div>
-        <button> Sign in with Google</button>
-        <div className='w-60 h-px bg-gray-400'></div>
-        <div>or Sign in with Email </div>
-        <div className='w-60 h-px bg-gray-400'></div>
+    <div className='flex flex-col items-center p-4'>
+      <p className='text-2xl mb-4'>Hello!</p>
+      <p className='text-xl mb-6'>Welcome Back to <span className='text-red-600 font-medium'>Shutter </span></p>
+      <div className='flex flex-col items-center w-full max-w-xs'>
+        <button className='mb-4 bg-gradient-to-b from-blue-200 via-red-600 to-red-800 py-2 px-4 rounded'>Sign in with Google</button>
+        <div className='w-full h-px bg-gray-400 mb-4'></div>
+        <div className='text-lg mb-4'>or Sign in with <span className='text-red-600'>Email</span></div>
+        <div className='w-full h-px bg-gray-400 mb-4'></div>
       </div>
-      <form>
-        <label htmlFor='Email'></label>
-       <input type='text' placeholder='irisakellia@gmail.com' id='name' />
-
-        <label htmlFor='Password'></label>
-       <input type='text' placeholder='gobitch' id='password' />
+      <form className='flex flex-col items-center w-full max-w-xs'>
+        <label htmlFor='Email' className='w-full text-left mb-2 text-red-600'></label>
+        <input type='email' placeholder='irisakellia@gmail.com' id='email' className='w-full p-2 mb-4 border border-gray-300 rounded' />
+        
+        <label htmlFor='Password' className='w-full text-left mb-2 text-red-600'></label>
+        <input type='password' placeholder='****' id='password' className='w-full p-2 mb-4 border border-gray-300 rounded' />
       </form>
-      <p>Forgot password ?</p>
-      <button>Login</button>
-      <p>Not registered yet? Create an Account</p>
+      <p className=' mb-4 cursor-pointer'>Forgot password?</p>
+      <button className=' bg-gradient-to-b from-blue-200 via-red-600 to-red-800 text-white py-2 px-4 rounded mb-4'>Login</button>
+      <p className=' cursor-pointer'>Not registered yet? Create an Account</p>
     </div>
   )
 }
