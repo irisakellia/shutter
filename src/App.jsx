@@ -1,26 +1,30 @@
 import React from 'react';
-import Title from './components/Title';
-import Navbar from './components/Navbar';
-import Get from './components/Get';
-import Form from './components/Form';
-import Make from './components/Make';
-import Need from './components/Need';
-import Interest from './components/Interest';
-import { RouterProvider , createBrowserRouter } from 'react-router-dom';
+
+import HomePage from './components/HomePage';
+import Form from './components/Login/Form'
+import { BrowserRouter, RouterProvider , createBrowserRouter } from 'react-router-dom';
 
 function App() {
+
+  const routes = createBrowserRouter([
+{
+  path:"/",
+  element:<HomePage/>
+}
+,
+{
+  path:"/login",
+  element:<Form/>
+}
+
+   
+  ])
  
 
   return (
-    <>
-      
-        <Title />
-      <Navbar />
-      <Get />
-      <Form />
-      <Make />
-      <Need/>
-      <Interest/>
+    <div>
+     < RouterProvider router = {routes}/>
+     
     </div>
   );
 }
