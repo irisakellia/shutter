@@ -6,15 +6,15 @@ import Form from './components/Form';
 import Make from './components/Make';
 import Need from './components/Need';
 import Interest from './components/Interest';
+import { RouterProvider , createBrowserRouter } from 'react-router-dom';
 
 function App() {
  
 
   return (
-    <div>
-      <div className="fixed">
+    <>
+      
         <Title />
-      </div>
       <Navbar />
       <Get />
       <Form />
