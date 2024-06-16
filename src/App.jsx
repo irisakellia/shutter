@@ -3,6 +3,7 @@ import React from 'react';
 import HomePage from './components/HomePage';
 import Form from './components/Login/Form'
 import { BrowserRouter, RouterProvider , createBrowserRouter } from 'react-router-dom';
+import WelcomePage from './components/WelcomePage';
 
 function App() {
 
@@ -15,6 +16,10 @@ function App() {
 {
   path:"/login",
   element:<Form/>
+},
+{
+  path:"/home",
+  element:<WelcomePage/>
 }
 
    
