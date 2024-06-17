@@ -20,7 +20,7 @@ const Form = () => {
         <input type='password' placeholder='****' id='password' className='w-full p-2 mb-4 border border-gray-300 rounded' />
       </form>
       <p className=' mb-4 cursor-pointer'>Forgot password?</p>
-      <button className=' bg-gradient-to-b from-blue-200 via-red-600 to-red-800 text-white py-2 px-4 rounded mb-4'><Link to={"/home"}>Login</Link></button>
+      <button className=' bg-gradient-to-b from-blue-200 via-red-600 to-red-800 text-white py-2 px-4 rounded mb-4'><Link to={"/home"}>SignUp</Link></button>
       <p className=' cursor-pointer'>Not registered yet? Create an Account</p>
     </div>
   )
