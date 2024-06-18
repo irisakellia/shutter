@@ -11,6 +11,8 @@ const WelcomePage = () => {
     >
       Welcome to shutter come view our gallery 
     </motion.div>
+
+    
   );
 }
 
