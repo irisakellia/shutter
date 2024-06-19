@@ -7,7 +7,7 @@ const WelcomePage = () => {
       className='text-3xl text-red-600'
       initial={{ opacity: 1, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 5 }}
+      transition={{ duration: 3 }}
     >
       Welcome to shutter come view our gallery 
     </motion.div>
