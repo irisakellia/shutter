@@ -15,7 +15,7 @@ const WelcomePage = () => {
         <button className='bg-red-600 p-2 py-2 rounded-xl text-white text-sm ml-10 '>
           View Gallery
         </button>
-        <p> Search for any image that you want seaech </p>
+        <p> Search for any image that you want search </p>
       </p>
     </motion.div>
 
