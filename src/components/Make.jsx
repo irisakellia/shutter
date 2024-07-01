@@ -12,7 +12,7 @@ const Make = () => {
       <div className='ml-34'>
 <img src={image} alt='image' className='w-14 h-14'/>
 <p className='font-medium font-sm'>450 million+ images</p>
-<p className='ml-4 text-xs text-black text-opacity-70'>200,000 new images</p>
+<p className='ml-4 text-xs text-black text-opacity-70'>200,000 new image</p>
 <p className='ml-4 text-xs text-black text-opacity-70'>added every day.</p>
       </div>
       <div>
