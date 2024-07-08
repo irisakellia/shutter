@@ -13,6 +13,9 @@ const Form = () => {
         <div className='w-full h-px bg-gray-400 mb-4'></div>
       </div>
       <form className='flex flex-col items-center w-full max-w-xs'>
+        <label htmlFor='name' className='w-full text-left mb-2 text-red-600'></label>
+        <input type='email' placeholder='kellia' id='email' className='w-full p-2 mb-4 border border-gray-300 rounded' />
+
         <label htmlFor='Email' className='w-full text-left mb-2 text-red-600'></label>
         <input type='email' placeholder='irisakellia@gmail.com' id='email' className='w-full p-2 mb-4 border border-gray-300 rounded' />
         
