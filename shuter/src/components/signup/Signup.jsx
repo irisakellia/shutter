@@ -1,8 +1,43 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react'
+import { Link, Navigate } from 'react-router-dom'
 
 const Form = () => {
-  
+  const navigate = useNavigate();
+  const[data, setData] = useState({
+    name:'',
+    email:'',
+    password:'',
+  });
+
+  const handleInputChange = (event)=>{
+    const{name, value} = event.target;
+    setData({
+      ...data,
+      [name]:value,
+    });
+
+  };
+
+  const handleSubmit = async(e)=>{
+  try {
+    const response = await fetch("http://localhost:4001/user/register",{
+      method:"POST",
+      headers:{
+        "Content-Type":"application/json",
+      },
+      body:JSON.stringify(data),
+    })
+
+const result = response.json();
+console.log(result);
+Navigate('../Login/Form.jsx')
+
+
+    
+  } catch (error) {
+    console.error(error.message);
+  }
+  }
 
   return (
     <div className='flex flex-col items-center p-4'>
