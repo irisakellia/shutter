@@ -30,7 +30,7 @@ const Signup = () => {
       
       const result = await response.json();
       console.log(result);
-      navigate('/Form.jsx'); // Corrected navigate function
+      navigate('./login'); // Corrected navigate function
 
     } catch (error) {
       console.error(error.message);

@@ -1,10 +1,10 @@
 import React from 'react';
 
 import HomePage from './components/HomePage';
-import Form from './components/Login/Form'
+
 import { BrowserRouter, RouterProvider , createBrowserRouter } from 'react-router-dom';
 import WelcomePage from './components/WelcomePage';
-import SignUp from './components/signup/Signup'
+import SignUp from './components/auth/signup/Signup'
 
 function App() {
 
@@ -14,10 +14,7 @@ function App() {
   element:<HomePage/>
 }
 ,
-{
-  path:"/login",
-  element:<Form/>
-},
+
 {
   path:"/home",
   element:<WelcomePage/>
