@@ -1,10 +1,10 @@
-const Service = require('../service/login')
+const authService = require('../service/login')
 
 async function login(req,res){
 try {
     const{email,password} = req.body ;
 
-    const token = Service.login(email,password);
+    const token = await  authService.login(email,password);
 
     res.json({token:token});
    
@@ -12,7 +12,7 @@ try {
 
 
 } catch (error) {
-    res.status(400).json({success:false,message:"invalid credentials"})
+    res.status(401).json({success:false,message:"invalid credentials"})
 }
 }
 

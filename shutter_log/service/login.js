@@ -4,21 +4,22 @@ const {generateToken} = require('../utils/jwtUtils')
 
 async function login(email,password){
     try {
-        const existingUser = User.findOne({email});
+        const existingUser = await  User.findOne({email});
 
         if(!existingUser){
-            console.error("user does not exist in my database")
+            throw new Error("user does not exist in my database")
         }
-const isPasswordValid = bcrypt.compare(password , existingUser.password);
+const isPasswordValid = await bcrypt.compare(password , existingUser.password);
 if(!isPasswordValid){
-    console.error("the password is invalid")
+    throw new Error("the password is invalid")
 
 }
 const token = generateToken(existingUser);
 return token ;
 
     } catch (error) {
-        res.status(400).json({success:false,message:"login failed"})
+        console.log("login eror", error.message)
+        throw new Error("Invalid credentials")
     }
 
 }

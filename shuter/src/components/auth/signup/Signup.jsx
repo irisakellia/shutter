@@ -4,9 +4,9 @@ import { useNavigate } from 'react-router-dom';
 const Signup = () => {
   const navigate = useNavigate();
   const [data, setData] = useState({
-    name:'',
-    email:'',
-    password:'',
+    name: '',
+    email: '',
+    password: '',
   });
 
   const handleInputChange = (event) => {
@@ -18,19 +18,19 @@ const Signup = () => {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault(); // Prevents default form submission behavior
+    e.preventDefault();
     try {
-      const response = await fetch("http://localhost:4001/user/register", {
-        method: "POST",
+      const response = await fetch('http://localhost:4001/user/register', {
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify(data),
       });
-      
+
       const result = await response.json();
       console.log(result);
-      navigate('/login'); // Corrected navigate function
+      navigate('/login'); // Use route path, not file path
 
     } catch (error) {
       console.error(error.message);
