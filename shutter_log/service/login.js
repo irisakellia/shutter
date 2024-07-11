@@ -7,7 +7,7 @@ async function login(email,password){
         const existingUser = await  User.findOne({email});
 
         if(!existingUser){
-            throw new Error("user does not exist in my database")
+            throw new Error("user does not exist ")
         }
 const isPasswordValid = await bcrypt.compare(password , existingUser.password);
 if(!isPasswordValid){
