@@ -34,8 +34,16 @@ const handleSubmit = async (e) => {
     });
 
     const response = await result.json();
+
     console.log(response);
-    navigate('/');
+    if(response.ok){
+
+      navigate('/home');
+
+    } else {
+      setError(response.message || 'login has failed');
+    }
+   
 
   } catch (error) {
     console.error(error.message);
@@ -63,13 +71,13 @@ const handleSubmit = async (e) => {
 
       />    
         <label htmlFor='Password' className='w-full text-left mb-2 text-red-600'></label>
-        <input type='password' placeholder='****' id='password' className='w-full p-2 mb-4 border border-gray-300 rounded' 
+        <input type='password' placeholder='****' id='password' name='password' className='w-full p-2 mb-4 border border-gray-300 rounded' 
         value={data.password}
         onChange={handleMyInputsBabe}
         />
      
   
-      <button className=' bg-gradient-to-b from-blue-200 via-red-600 to-red-800 text-white py-2 px-4 rounded mb-4'><Link to={"/home"}>Login</Link></button>
+      <button className=' bg-gradient-to-b from-blue-200 via-red-600 to-red-800 text-white py-2 px-4 rounded mb-4'>Log In</button>
     
     
       </form>

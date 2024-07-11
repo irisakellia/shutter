@@ -10,7 +10,7 @@ const WelcomePage = () => {
         <button className='bg-red-600 p-2 py-2 rounded-xl text-white text-sm ml-10 '>
           View Gallery
         </button>
-        <p>  </p>
+        <p className='float-right'> log out </p>
       </p>
       </div>
 
