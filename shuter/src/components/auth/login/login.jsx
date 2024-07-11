@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Form = () => {
   const navigate = useNavigate();
@@ -36,7 +36,7 @@ const Form = () => {
         localStorage.setItem("token", response.token);
         navigate('/home');
       } else {
-        setError(response.message || 'Login failed');
+        setError( 'Login failed');
       }
 
     } catch (error) {
@@ -82,7 +82,7 @@ const Form = () => {
       </form>
       {error && <p className='text-red-600'>{error}</p>}
       <p className='mb-4 cursor-pointer'>Forgot password?</p>
-      <p className='cursor-pointer'>Not registered yet? Create an Account</p>
+      <p className='cursor-pointer'>Not registered yet? Create an <Link to={'/signup'}>Account</Link> </p>
     </div>
   );
 };
