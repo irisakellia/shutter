@@ -21,31 +21,27 @@ const handleMyInputsBabe = (event)=>{
 
 };
 
-const handleSubmit = async(e)=>{
+const handleSubmit = async (e) => {
   e.preventDefault();
-  
 
   try {
-    const result = await fetch("http://localhost:4001/auth/login",{
-      method:"POST",
-      headers:{
-       "Content-Type": "application/JSON",
+    const result = await fetch("http://localhost:4001/auth/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(data),
-    },
+    });
 
     const response = await result.json();
     console.log(response);
-    Navigate('')
-  
-   
+    navigate('/');
 
-  )
-    
   } catch (error) {
     console.error(error.message);
   }
-}
+};
+
 
 
 
