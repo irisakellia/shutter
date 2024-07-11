@@ -19,7 +19,7 @@ const WelcomePage = () => {
           View Gallery
         </button>
         <button className='float-right' onClick={handleLogout}>
-          Logout
+          Log out
         </button>
       </p>
     </div>

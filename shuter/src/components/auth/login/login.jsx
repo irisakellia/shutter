@@ -36,7 +36,7 @@ const Form = () => {
         localStorage.setItem("token", response.token);
         navigate('/home');
       } else {
-        setError( 'Login failed');
+        console.error( 'Login failed');
       }
 
     } catch (error) {
