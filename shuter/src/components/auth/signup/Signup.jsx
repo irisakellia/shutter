@@ -30,7 +30,7 @@ const Signup = () => {
 
       const result = await response.json();
       console.log(result);
-      navigate('/login'); // Use route path, not file path
+      navigate('/login'); 
 
     } catch (error) {
       console.error(error.message);
@@ -48,7 +48,7 @@ const Signup = () => {
         <div className='w-full h-px bg-gray-400 mb-4'></div>
       </div>
       <form onSubmit={handleSubmit} className='flex flex-col items-center w-full max-w-xs'>
-        <label htmlFor='name' className='w-full text-left mb-2 text-red-600'>Name</label>
+        <label htmlFor='name' className='w-full text-left mb-2 text-red-600'>name</label>
         <input type='text' name='name' placeholder='kellia' id='name' className='w-full p-2 mb-4 border border-gray-300 rounded'
           value={data.name}
           onChange={handleInputChange}
