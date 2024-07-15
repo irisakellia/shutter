@@ -30,13 +30,12 @@ const Form = () => {
       });
 
       const response = await result.json();
-      console.log(response);
 
       if (result.ok) {
         localStorage.setItem("token", response.token);
         navigate('/home');
       } else {
-        console.error( 'Login failed');
+        setError(response.message || 'Login failed');
       }
 
     } catch (error) {
@@ -80,9 +79,9 @@ const Form = () => {
 
         <button className='bg-gradient-to-b from-blue-200 via-red-600 to-red-800 text-white py-2 px-4 rounded mb-4'>Log In</button>
       </form>
-      {error && <p className='text-red-600'>{error}</p>}
+      {error && <p className='text-black'>{error}</p>}
       <p className='mb-4 cursor-pointer'>Forgot password?</p>
-      <p className='cursor-pointer'>Not registered yet? Create an <Link to={'/signup'}>Account</Link> </p>
+      <p className='cursor-pointer'>Not registered yet? Create an <Link to={'/signup'}>Account</Link></p>
     </div>
   );
 };
