@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate , Link} from 'react-router-dom';
 
 const Signup = () => {
   const navigate = useNavigate();
@@ -48,7 +48,7 @@ const Signup = () => {
         <div className='w-full h-px bg-gray-400 mb-4'></div>
       </div>
       <form onSubmit={handleSubmit} className='flex flex-col items-center w-full max-w-xs'>
-        <label htmlFor='name' className='w-full text-left mb-2 text-red-600'>name</label>
+        <label htmlFor='name' className='w-full text-left mb-2 text-red-600'>Name</label>
         <input type='text' name='name' placeholder='kellia' id='name' className='w-full p-2 mb-4 border border-gray-300 rounded'
           value={data.name}
           onChange={handleInputChange}
@@ -69,7 +69,7 @@ const Signup = () => {
         <button type='submit' className='bg-gradient-to-b from-blue-200 via-red-600 to-red-800 text-white py-2 px-4 rounded mb-4'>Signup</button>
       </form>
       <p className='mb-4 cursor-pointer'>Forgot password?</p>
-      <p className='cursor-pointer'>Not registered yet? Create an Account</p>
+      <p className='cursor-pointer'>Already have an account? <Link to={"/login"}>Signin</Link></p>
     </div>
   );
 };
