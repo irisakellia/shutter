@@ -57,10 +57,9 @@ const WelcomePage = () => {
           <div className="text-sm text-gray-500">72 This week</div>
         </div>
         <div className="bg-white p-4 shadow rounded-lg">
-          <div className="text-gray-600">NEW MESSAGES</div>
+          <div className="text-gray-600">NEW IMAGES</div>
           <div className="text-3xl font-bold">85</div>
-          <div className="text-sm text-gray-500">Response Rate</div>
-        </div>
+          </div>
       </div>
       <div className="p-4">
         <div className="bg-white p-4 shadow rounded-lg">
@@ -76,12 +75,11 @@ const WelcomePage = () => {
           </ResponsiveContainer>
         </div>
       </div>
-      <div className="fixed left-0 top-1/2 transform -translate-y-1/2 bg-orange-600 text-white p-4 rounded-r-lg">
+      <div className="absolute left-0 top-80 transform -translate-y-1/2 bg-red-600 text-white p-4 rounded-r-lg">
         <ul>
-          <li className="py-2">Item 1</li>
-          <li className="py-2">Item 2</li>
-          <li className="py-2">Item 3</li>
-          <li className="py-2">Item 4</li>
+          <li className="py-2">Images</li>
+          <li className="py-2">nums</li>
+          <li className="py-2">profile</li>
         </ul>
       </div>
     </div>
