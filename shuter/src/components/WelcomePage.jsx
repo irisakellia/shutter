@@ -1,29 +1,30 @@
 // src/components/WelcomePage.js
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Line } from 'react-chartjs-2';
+import {
+  LineChart,
+  Line,
+  CartesianGrid,
+  XAxis,
+  YAxis,
+  Tooltip,
+  ResponsiveContainer,
+} from 'recharts';
 
-const data = {
-  labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-  datasets: [
-    {
-      label: 'Observations',
-      data: [10, 25, 35, 50, 65, 70, 60, 75, 80, 95, 85, 100],
-      borderColor: '#FB923C',
-      backgroundColor: '#FB923C',
-      fill: false,
-      tension: 0.1,
-    },
-  ],
-};
-
-const options = {
-  scales: {
-    y: {
-      beginAtZero: true,
-    },
-  },
-};
+const data = [
+  { month: 'Jan', observations: 10 },
+  { month: 'Feb', observations: 25 },
+  { month: 'Mar', observations: 35 },
+  { month: 'Apr', observations: 50 },
+  { month: 'May', observations: 65 },
+  { month: 'Jun', observations: 70 },
+  { month: 'Jul', observations: 60 },
+  { month: 'Aug', observations: 75 },
+  { month: 'Sep', observations: 80 },
+  { month: 'Oct', observations: 95 },
+  { month: 'Nov', observations: 85 },
+  { month: 'Dec', observations: 100 },
+];
 
 const WelcomePage = () => {
   const navigate = useNavigate();
@@ -64,7 +65,15 @@ const WelcomePage = () => {
       <div className="p-4">
         <div className="bg-white p-4 shadow rounded-lg">
           <div className="text-gray-600">Chart</div>
-          <Line data={data} options={options} />
+          <ResponsiveContainer width="100%" height={300}>
+            <LineChart data={data}>
+              <Line type="monotone" dataKey="observations" stroke="#FB923C" />
+              <CartesianGrid stroke="#ccc" />
+              <XAxis dataKey="month" />
+              <YAxis />
+              <Tooltip />
+            </LineChart>
+          </ResponsiveContainer>
         </div>
       </div>
       <div className="fixed left-0 top-1/2 transform -translate-y-1/2 bg-orange-600 text-white p-4 rounded-r-lg">
