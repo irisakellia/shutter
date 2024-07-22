@@ -1,5 +1,4 @@
 import Title from "./Title";
-import Form from "./Form";
 import Get from "./Get";
 import Interest from "./Interest";
 import Make from "./Make";
@@ -14,7 +13,6 @@ const HomePage = () => {
          <Title />
       <Navbar />
       <Get />
-      <Form />
       <Make />
       <Need/>
       <Interest/>
