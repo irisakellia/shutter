@@ -1,4 +1,4 @@
-// src/components/WelcomePage.js
+
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import {
@@ -37,10 +37,10 @@ const WelcomePage = () => {
   return (
     <div className="bg-white min-h-screen">
       <div className="flex justify-between items-center p-4 bg-gray-100 border-b border-gray-200">
-        <button onClick={() => navigate('/')} className="text-2xl font-bold">
-          E_Dive
+        <button onClick={() => navigate('/')} className="text-xl font-bold text-red-600 font-serif">
+          GALLERY VIEWS
         </button>
-        <button className="text-red-500" onClick={handleLogout}>
+        <button className="text-red-500 bg-black" onClick={handleLogout} >
           Log out
         </button>
       </div>
