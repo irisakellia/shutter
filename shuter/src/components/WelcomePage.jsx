@@ -12,18 +12,18 @@ import {
 } from 'recharts';
 
 const data = [
-  { month: 'Jan', observations: 10 },
-  { month: 'Feb', observations: 25 },
-  { month: 'Mar', observations: 35 },
-  { month: 'Apr', observations: 50 },
-  { month: 'May', observations: 65 },
-  { month: 'Jun', observations: 70 },
-  { month: 'Jul', observations: 60 },
-  { month: 'Aug', observations: 75 },
-  { month: 'Sep', observations: 80 },
-  { month: 'Oct', observations: 95 },
-  { month: 'Nov', observations: 85 },
-  { month: 'Dec', observations: 100 },
+  { month: 'Jan', viewers: 10 },
+  { month: 'Feb', viewers: 25 },
+  { month: 'Mar', viewers: 35 },
+  { month: 'Apr', viewers: 50 },
+  { month: 'May', viewers: 65 },
+  { month: 'Jun', viewers: 70 },
+  { month: 'Jul', viewers: 60 },
+  { month: 'Aug', viewers: 75 },
+  { month: 'Sep', viewers: 80 },
+  { month: 'Oct', viewers: 95 },
+  { month: 'Nov', viewers: 85 },
+  { month: 'Dec', viewers: 100 },
 ];
 
 const WelcomePage = () => {
@@ -66,7 +66,7 @@ const WelcomePage = () => {
           <div className="text-gray-600">Chart</div>
           <ResponsiveContainer width="100%" height={300}>
             <LineChart data={data}>
-              <Line type="monotone" dataKey="observations" stroke="#FB923C" />
+              <Line type="monotone" dataKey="viewers" stroke="#FB923C" />
               <CartesianGrid stroke="#ccc" />
               <XAxis dataKey="month" />
               <YAxis />
