@@ -40,13 +40,13 @@ const WelcomePage = () => {
         <button onClick={() => navigate('/')} className="text-xl font-bold text-red-600 font-serif">
           GALLERY VIEWS
         </button>
-        <button className="text-red-500 bg-black" onClick={handleLogout} >
+        <button className="text-red-500 font-serif text-xl" onClick={handleLogout} >
           Log out
         </button>
       </div>
       <div className="p-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         <div className="bg-white p-4 shadow rounded-lg">
-          <div className="text-gray-600">TOTAL ACTIVE OBSERVATIONS</div>
+          <div className="text-gray-600 font-serif">TOTAL Images</div>
           <div className="text-3xl font-bold">95</div>
           <div className="text-sm text-gray-500">25% Improvement</div>
         </div>
