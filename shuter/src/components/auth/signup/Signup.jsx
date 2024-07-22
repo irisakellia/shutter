@@ -48,19 +48,19 @@ const Signup = () => {
         <div className='w-full h-px bg-gray-400 mb-4'></div>
       </div>
       <form onSubmit={handleSubmit} className='flex flex-col items-center w-full max-w-xs'>
-        <label htmlFor='name' className='w-full text-left mb-2 text-red-600'>Name</label>
+        <label  className='w-full text-left mb-2 text-red-600'>Name</label>
         <input type='text' name='name' placeholder='kellia' id='name' className='w-full p-2 mb-4 border border-gray-300 rounded'
           value={data.name}
           onChange={handleInputChange}
         />
 
-        <label htmlFor='email' className='w-full text-left mb-2 text-red-600'>Email</label>
+        <label  className='w-full text-left mb-2 text-red-600'>Email</label>
         <input type='email' name='email' placeholder='irisakellia@gmail.com' id='email' className='w-full p-2 mb-4 border border-gray-300 rounded'
           value={data.email}
           onChange={handleInputChange}
         />
         
-        <label htmlFor='password' className='w-full text-left mb-2 text-red-600'>Password</label>
+        <label className='w-full text-left mb-2 text-red-600'>Password</label>
         <input type='password' name='password' placeholder='****' id='password' className='w-full p-2 mb-4 border border-gray-300 rounded' 
           value={data.password}
           onChange={handleInputChange}
